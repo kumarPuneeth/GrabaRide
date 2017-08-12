@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Grab a Ride</string>
+    <string name="pickupDate">Pick Up Date</string>
+    <string name="dropDate">Drop Date</string>
 </resources>

@@ -2,52 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="10dp">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="2">
 
-        <DatePicker
-            android:id="@+id/datePicker4"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignTop="@+id/datePicker3"
-            android:layout_marginStart="45dp"
-            android:layout_toEndOf="@+id/datePicker3" />
-
-        <DatePicker
-            android:id="@+id/datePicker3"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/textView6"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="20dp" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/selectFrom"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/textView6"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="52dp"
-            android:text="DROP" />
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/ic_date_range_black_24dp"
+            android:focusable="false"
+            android:hint="@string/pickupDate" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/selectTo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="51dp"
-            android:layout_marginTop="22dp"
-            android:text="PICKUP" />
-    </RelativeLayout>
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/ic_date_range_black_24dp"
+            android:focusable="false"
+            android:hint="@string/dropDate" />
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -56,7 +37,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ListView
                 android:layout_width="match_parent"
